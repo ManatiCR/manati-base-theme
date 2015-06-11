@@ -74,7 +74,8 @@ module.exports = function (grunt) {
             reporter: require('jshint-stylish')
           },
           all: [
-            'js/manati.js'
+            'js/script.js',
+            '!js/*.min.js'
           ]
         },
 
@@ -104,7 +105,7 @@ module.exports = function (grunt) {
               beautify: true
             },
             files: {
-              'js/manati.min.js': ['js/manati.js']
+              'js/script.min.js': ['js/script.js']
             }
           },
           prod: {
@@ -113,7 +114,7 @@ module.exports = function (grunt) {
               compress: true
             },
             files: {
-              'js/manati.min.js': ['js/manati.js']
+              'js/script.min.js': ['js/script.js']
             }
           }
         }

@@ -38,4 +38,4 @@ regions[closure]            = Closure
 stylesheets[all][] = css/style.css
 
 ;-------------- J S -------------
-scripts[] = js/manati.min.js
+scripts[] = js/script.min.js
