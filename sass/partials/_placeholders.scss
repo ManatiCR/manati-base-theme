@@ -1,0 +1,17 @@
+//
+// Placeholders
+//
+
+// hidden placeholder
+%hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// text-hidden placeholder
+%text-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,88 @@
+/*
+ * Rules for base elements
+ */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+p, li {
+  @include font-size(14);
+  color: #555;
+  line-height: 1.5;
+}
+
+p, ul, ol, dl {
+  margin: 0 0 0.5em 0;
+}
+
+ul, ol {
+  padding-left: 2em;
+}
+
+p {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+// Tablas
+table {
+  width: 100%;
+  border-collapse: collapse;
+  @include font-size(14);
+}
+
+th, td {
+  padding: 0.5em;
+}
+
+// Forms 
+
+
+/*
+ * Rules for base drupal elements
+ */
+
+.element-invisible {
+  @extend %hidden;
+}
+
+// Tabs
+.tabs {
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+  li {
+    list-style-type: none;
+    float: left;
+  }
+  a {
+    color: #333;
+    @include font-size(14);
+    padding-right: 20px;
+    &.active {
+      color: #000;
+      font-weight: 600;
+    }
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}

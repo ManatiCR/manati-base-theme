@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+ * Rules for base elements
+ */
+html {
+  font-size: 62.5%; }
+
+body {
+  margin: 0; }
+
+p, li {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.5; }
+
+p, ul, ol, dl {
+  margin: 0 0 0.5em 0; }
+
+ul, ol {
+  padding-left: 2em; }
+
+p {
+  overflow: hidden; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+th, td {
+  padding: 0.5em; }
+
+/*
+ * Rules for base drupal elements
+ */
+.tabs {
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0; }
+  .tabs li {
+    list-style-type: none;
+    float: left; }
+  .tabs a {
+    color: #333;
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-right: 20px; }
+    .tabs a.active {
+      color: #000;
+      font-weight: 600; }
+    .tabs a:hover {
+      color: #000;
+      text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
