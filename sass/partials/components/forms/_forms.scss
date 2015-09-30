@@ -1,0 +1,85 @@
+//
+// Global forms
+//
+
+label,
+.webform-container-inline label {
+  @include font-size(14);
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.option {
+  display: inline;
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+
+select {
+  @include font-size(12);
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @include font-size(12);
+  border-radius: 3px;
+  border: solid #e1e1e1 1px;
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  @include media(min-width 767) {
+    max-width: 300px;
+  }
+}
+input[type="checkbox"],
+input[type="radio"] {
+  @include font-size(16);
+  vertical-align: baseline;
+}
+input[type="submit"] {
+  border: 0;
+  outline: 0;
+  padding: 8px 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  @include media(min-width 767) {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+     -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+.form-type-radio {
+  margin-bottom: 5px;
+}
+
+// Formatting options
+
+.field-widget-text-textarea .form-type-textarea {
+  margin-bottom: 10px;
+}
+.filter-wrapper {
+  border: 0;
+  background: #fff;
+  border-radius: 5px;
+}
+
+// Errors
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 2px solid red;
+}
