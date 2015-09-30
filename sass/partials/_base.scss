@@ -1,6 +1,6 @@
-/*
- * Rules for base elements
- */
+//
+// Rules for base elements
+//
 
 html {
   font-size: 62.5%;
@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-// Tablas
+// Tables
 table {
   width: 100%;
   border-collapse: collapse;
@@ -51,18 +51,14 @@ th, td {
   padding: 0.5em;
 }
 
-// Forms 
-
-
-/*
- * Rules for base drupal elements
- */
+// Rules for base drupal elements
 
 .element-invisible {
   @extend %hidden;
 }
 
 // Tabs
+
 .tabs {
   padding: 0;
   overflow: hidden;
