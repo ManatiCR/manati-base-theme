@@ -73,34 +73,48 @@ function manati_preprocess_html(&$variables) {
   );
   drupal_add_html_head($meta_cleartype, 'meta_cleartype');
 
-   // Use html5shiv.
-  if (theme_get_setting('html5shim')) {
-    $element = array(
-      'element' => array(
-        '#tag' => 'script',
-        '#value' => '',
-        '#attributes' => array(
-          'type' => 'text/javascript',
-          'src' => file_create_url(drupal_get_path('theme', 'sonambulo') . '/js/html5shiv-printshiv.js'),
-        ),
-      ),
-    );
-    $html5shim = array(
-      '#type' => 'markup',
-      '#markup' => "<!--[if lt IE 9]>\n" . theme('html_tag', $element) . "<![endif]-->\n",
-    );
-    drupal_add_html_head($html5shim, 'sonambulo_html5shim');
-  }
+  // TODO: Include this using Yeoman generator settings
+  // Use html5shiv.
+  $element = array(
+   'element' => array(
+     '#tag' => 'script',
+     '#value' => '',
+     '#attributes' => array(
+       'type' => 'text/javascript',
+       'src' => 'https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js',
+     ),
+   ),
+  );
+  $html5shiv = array(
+   '#type' => 'markup',
+   '#markup' => "<!--[if lt IE 9]>\n" . theme('html_tag', $element) . "<![endif]-->\n",
+  );
+  drupal_add_html_head($html5shiv, 'manati_theme_html5shiv');
+  // ENDTODO
 
+  // TODO: Include this using Yeoman generator settings
   // Use Respond.js.
-  if (theme_get_setting('respond_js')) {
-    drupal_add_js(drupal_get_path('theme', 'sonambulo') . '/js/respond.min.js', array('group' => JS_LIBRARY, 'weight' => -100));
-  }
+  $element = array(
+   'element' => array(
+     '#tag' => 'script',
+     '#value' => '',
+     '#attributes' => array(
+       'type' => 'text/javascript',
+       'src' => 'https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
+     ),
+   ),
+  );
+  $respondjs = array(
+   '#type' => 'markup',
+   '#markup' => "<!--[if lt IE 9]>\n" . theme('html_tag', $element) . "<![endif]-->\n",
+  );
+  drupal_add_html_head($respondjs, 'manati_theme_respondjs');
+  // ENDTODO
 
+  // TODO: Include this using Yeoman generator settings
   // Use normalize.css
-  if (theme_get_setting('normalize_css')) {
-    drupal_add_css(drupal_get_path('theme', 'sonambulo') . '/css/normalize.css', array('group' => CSS_SYSTEM, 'weight' => -100));
-  }
+  drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css', array('type' => 'external', 'group' => CSS_SYSTEM, 'weight' => -1000));
+  // ENDTODO
 }
 
 /**
