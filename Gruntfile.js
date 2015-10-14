@@ -49,7 +49,7 @@ module.exports = function (grunt) {
               outputStyle: 'compressed',
             },
             files: {
-              'css/style.css': 'sass/style.scss', 
+              'css/style.css': 'sass/style.scss',
             },
           },
         },
@@ -59,14 +59,14 @@ module.exports = function (grunt) {
           options: {
             map: true,
             processors: [
-              require('autoprefixer-core')({browsers: 'last 2 versions'}).postcss
+              require('autoprefixer-core')({browsers: ['last 2 version']})
             ]
           },
           dist: {
-            src: 'css/*.css'
+            src: 'css/style.css'
           }
         },
-        
+
         // Javascript linting with jshint
         jshint: {
           options: {
@@ -74,8 +74,7 @@ module.exports = function (grunt) {
             reporter: require('jshint-stylish')
           },
           all: [
-            'js/script.js',
-            '!js/*.min.js'
+            'src-js/*.js'
           ]
         },
 
@@ -105,33 +104,33 @@ module.exports = function (grunt) {
               beautify: true
             },
             files: {
-              'js/script.min.js': ['js/script.js']
+              'js/script.min.js': ['src-js/script.js']
             }
           },
           prod: {
             options: {
               mangle: true,
-              compress: true
+              compress: {}
             },
             files: {
-              'js/script.min.js': ['js/script.js']
+              'js/script.min.js': ['src-js/script.js']
             }
           }
         }
     });
- 
-    // Load the plugin(s), but I'm using load-grunt-tasks 
+
+    // Load the plugin(s), but I'm using load-grunt-tasks
     // https://github.com/sindresorhus/load-grunt-tasks
     // grunt.loadNpmTasks('grunt-concurrent');
- 
- 
+
+
     // Where we tell Grunt what to do when we type "grunt" into the terminal.
-    // The "default" task is what I leave running all the time. Since it is the default, 
-    // you can start it by simply running 
+    // The "default" task is what I leave running all the time. Since it is the default,
+    // you can start it by simply running
     // $ grunt
     // or, to run production's tasks
     // $ grunt build
-    
+
     grunt.registerTask('prod', [
         'jshint',
         'uglify:prod',
@@ -144,6 +143,7 @@ module.exports = function (grunt) {
         'newer:jshint',
         'uglify:dev',
         'sass:dev',
+        'postcss',
         'watch'
     ]);
 };
