@@ -10,6 +10,12 @@ body {
   margin: 0;
 }
 
+img {
+  width: inherit;
+  max-width: 100%;
+  height: auto;
+}
+
 p, li {
   @include font-size(14);
   color: #555;
