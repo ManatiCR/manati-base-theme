@@ -5,11 +5,11 @@ function manati_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type'  => 'fieldset',
     '#title' => t('Additional Libraries'),
   );
-  $form['libraries']['html5shim'] = array(
+  $form['libraries']['html5shiv'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('html5 Shim'),
-    '#default_value' => theme_get_setting('html5shim'),
-    '#description'   => t('Adds the html5 shim, a library that enables non-modern browsers to recognize HTML5 elements.')
+    '#title'         => t('html5 Shiv'),
+    '#default_value' => theme_get_setting('html5shiv'),
+    '#description'   => t('Adds the html5 shiv, a library that enables non-modern browsers to recognize HTML5 elements.')
   );
   $form['libraries']['respond_js'] = array(
     '#type'          => 'checkbox',
