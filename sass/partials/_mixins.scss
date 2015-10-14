@@ -7,3 +7,13 @@
   font-size: $size + px;
   font-size: ($size / 10) + rem;
 }
+
+// sprite mixin
+// usage example:
+// @include sprite(red, $x: center, $y: -589px);
+@mixin sprite($color, $x, $y, $image: "$sprite-image") {
+  background: $color url($image + ".png");
+  background-image: url($image + ".svg"), none;
+  background-position: $x $y;
+  background-repeat: no-repeat;
+}
