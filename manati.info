@@ -39,3 +39,13 @@ stylesheets[all][] = css/style.css
 
 ;-------------- J S -------------
 scripts[] = js/script.min.js
+
+;-------------- FOAD -------------
+stylesheets[all][] = node.css
+stylesheets[all][] = field.css
+stylesheets[all][] = user.css
+stylesheets[all][] = search.css
+stylesheets[all][] = system.base.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
