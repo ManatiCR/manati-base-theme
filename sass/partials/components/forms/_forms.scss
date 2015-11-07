@@ -37,7 +37,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  @include media(min-width 767) {
+  @include media(min-width 767px) {
     max-width: 300px;
   }
 }
@@ -52,7 +52,7 @@ input[type="submit"] {
   padding: 8px 25px;
   width: 100%;
   margin-bottom: 10px;
-  @include media(min-width 767) {
+  @include media(min-width 767px) {
     width: auto;
     display: inline-block;
     margin-right: 10px;
